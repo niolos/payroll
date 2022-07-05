@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Department Summary</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+            <th>Role</th>
+        </tr>
+        <% rows.forEach(function(data){%>
+            <tr>
+            <td><%=data.id%></td>
+            <td><%=data.f_name%></td>
+            <td><%=data.l_name%></td>
+            <td><%=data.department_name%></td>
+            <td><%=data.roles_name%></td>
+        </tr>
+        <%})%>
+    </table>
+</div>

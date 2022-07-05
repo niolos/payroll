@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="payslip">
+        <h1>Serhant Construction</h1>
+        <div class="empDetail">
+            <div class="empInfo">
+                <h3>ID: <%=payslip.eId%></h3>
+                <h3>Name: <%=payslip.f_name%> <%=payslip.l_name%></h3>
+                <h3>Hours Worked:<%=payslip.hours%></h3>
+                <h3>Overtime Hours: <%=payslip.overtime%></h3>
+                <h3>Department: <%=payslip.dep%></h3>
+            </div>
+            <table class="earnings">
+                <tr>
+                    <th>Earnings</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Base Pay</td>
+                    <td><%=beforOver%></td>
+                </tr>
+                <tr>
+                    <td>Overtime Pay</td>
+                    <td><%=over%></td>
+                </tr>
+                <tr>
+                    <td>Total Pay</td>
+                    <td><%=totalSalary%> </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>

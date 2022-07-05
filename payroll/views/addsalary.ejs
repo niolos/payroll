@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Enter Information For Pay Period</h1>
+    <form action="/addsalary/addform" class="cycleSearch" method="post">
+        <div class="inputCon">
+            <div class="input">
+                <input type="number" name="empId" required>
+                <span id="label">Employee Id</span>
+            </div>
+            <div class="select">  
+                <select name="payP">
+                    <% cycle.forEach(function(data) {%>
+                        <option selected="selected" value="<%=data.id%>"><%=data.pay_period%></option>
+                    <%})%>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="sub">
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Enter Information For Sick Days To Update</h1>
+    <form action="/sickdays/update/sickdays" class="cycleSearch" method="post">
+        <div class="inputCon">
+            <div class="input">
+                <input type="number" name="days" value="<%=sickdays%>" required>
+                <span id="label">Sick Days</span>
+            </div>
+            <div class="select">  
+                <select name="payP">
+                        <option selected="selected" value="<%=pay.id%>"><%=pay.pay_period%></option>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+        <input type="number" value="<%=pay.tId%>" name="tid" hidden>
+        <input type="submit" class="sub">
+    </form>
+</div>

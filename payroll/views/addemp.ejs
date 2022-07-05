@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>ADD EMPLOYEE</h1>
+    <form action="/addemp/add" method="post" class="empin">
+        <div class="input">
+            <input type="text" name="fname" required>
+            <span id="label">First Name</span>
+        </div> 
+        <div class="input">
+            <input type="text" name="lname" required>
+            <span id="label">Last Name</span>
+        </div> 
+        <div class="input">
+            <input type="text" name="email" required>
+            <span id="label">Email</span>
+        </div> <div class="input">
+            <input type="password" name="password" required>
+            <span id="label">Password</span>
+        </div>
+        <div class="select">  
+            <select name="role">
+                <% emprole.forEach(function(data) {%>
+                    <option selected="selected" value="<%=data.id%>"><%=data.roles_name%></option>
+                <%})%>
+            </select>
+            <div class="select_arrow">
+            </div>
+        </div>
+        <div class="select">  
+            <select name="dep">
+                <% dep.forEach(function(data) {%>
+                    <option selected="selected" value="<%=data.id%>"><%=data.departmnet_name%></option>
+                <%})%>
+            </select>
+            <div class="select_arrow">
+            </div>
+        </div>
+        <input type="submit" class="sub" >
+    </form>
+</div>

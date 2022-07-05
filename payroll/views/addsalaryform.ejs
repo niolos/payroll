@@ -1,0 +1,27 @@
+<div class="container">
+    <form action="/addsalary/add" method="post" class="addsalary">
+        <div class="inputCon">
+            <h3>Name:  <%=emp.f_name%>  <%=emp.l_name%></h3>
+            <div class="input">
+                <input type="number" name="hours" required>
+                <span id="label">Hours Worked</span>
+            </div>
+            <div class="input">
+                <input type="number" name="days" required>
+                <span id="label">Sick Days</span>
+            </div>
+            <input type="number" value="<%=emp.eId%>" name="eId" hidden>
+            <div class="select">  
+                <select name="addpPay">
+                    <% pp.forEach(function(data) {%>
+                        <option selected="selected" value="<%=data.id%>"><%=data.pay_period%></option>
+                    <%})%>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="sub">
+
+    </form>
+</div>

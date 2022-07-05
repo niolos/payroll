@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Enter Information For Overtime To Update</h1>
+    <form action="/overtime/update/overtime" class="cycleSearch" method="post">
+        <div class="inputCon">
+            <div class="input">
+                <input type="number" name="hours" value="<%=pay.work_hours%>" required>
+                <span id="label">Work Hours</span>
+            </div>
+            <div class="select">  
+                <select name="payP">
+                        <option selected="selected" value="<%=pay.id%>"><%=pay.pay_period%></option>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+        <input type="number" value="<%=pay.tId%>" name="tid" hidden>
+        <input type="submit" class="sub">
+    </form>
+</div>

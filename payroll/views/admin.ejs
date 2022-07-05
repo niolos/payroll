@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Salary Information</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Hours Worked</th>
+            <th>Overtime</th>
+            <th>Sick Days(hours)</th>
+            <th>Pay Period</th>
+            <th>Status</th>
+        </tr>
+        <% pay.forEach(function(data) {%>
+            <tr>
+                <td>
+                    <%= data.eId %> 
+                </td>
+                <td>
+                    <%= data.f_name %> 
+                </td>
+                <td>
+                    <%= data.l_name %> 
+                </td>
+                <td>
+                    <%= data.hours_worked %> 
+                </td>
+                <td>
+                    <%= data.overtime %> 
+                </td>
+                <td>
+                    <%= data.sick_days %> 
+                </td>
+                <td>
+                    <%= data.pay_period %> 
+                </td>
+                <td>
+                    <%= data.payment_status %> 
+                </td>
+            </tr>
+        <%})%>
+    </table>
+</div>
